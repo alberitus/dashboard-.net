@@ -44,8 +44,6 @@
                     asp-controller="Home" asp-action="Privacy">Privacy</a>
             </li>
         </ul>
-
-        <!-- Logout di kanan -->
         <ul class="navbar-nav ms-auto">
             @if (!string.IsNullOrEmpty(username))
             {
@@ -111,7 +109,6 @@
         hideLoader();
     });
 
-    // Loader otomatis saat form submit
     document.addEventListener("DOMContentLoaded", () => {
         const forms = document.querySelectorAll("form");
         forms.forEach(form => {

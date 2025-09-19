@@ -12,7 +12,7 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
     private readonly AppDbContext _context; 
 
-    public HomeController(ILogger<HomeController> logger, AppDbContext context) // inject context
+    public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
         _logger = logger;
         _context = context;

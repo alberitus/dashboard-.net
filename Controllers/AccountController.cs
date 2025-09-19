@@ -26,7 +26,6 @@ namespace InventorySystem.Controllers
             var user = _context.Users.FirstOrDefault(u => u.Username == username);
             if (user != null && VerifyPassword(password, user.PasswordHash))
             {
-                // Simpan session
                 HttpContext.Session.SetString("Username", user.Username);
                 HttpContext.Session.SetString("Role", user.Role);
 
