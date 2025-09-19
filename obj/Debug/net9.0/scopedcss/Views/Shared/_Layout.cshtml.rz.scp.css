@@ -1,0 +1,85 @@
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-55uinp09wz] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-55uinp09wz] {
+  color: #0077cc;
+}
+
+.btn-primary[b-55uinp09wz] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-55uinp09wz], .nav-pills .show > .nav-link[b-55uinp09wz] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-55uinp09wz] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-55uinp09wz] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-55uinp09wz] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-55uinp09wz] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-55uinp09wz] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+.loader[b-55uinp09wz] {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  --c:#0000 calc(100% - 8px),#000 calc(100% - 6px) 96%,#0000;
+  background:
+    radial-gradient(farthest-side at bottom,var(--c)) 0 0,
+    radial-gradient(farthest-side at top   ,var(--c)) 100% 100%;
+  background-size:calc(50% + 3px) 50%;
+  background-repeat: no-repeat;
+  animation: l13-b-55uinp09wz 2s infinite linear;
+  margin: auto;
+}
+.loader[b-55uinp09wz]:before {
+  content: "";
+  flex: 1;
+  background: inherit;
+  transform: rotate(90deg);
+}
+@keyframes l13-b-55uinp09wz {
+  100% {transform:rotate(1turn)}
+}
+
+.loader-overlay[b-55uinp09wz] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  display: none;
+}

@@ -1,0 +1,22 @@
+@model InventorySystem.Models.InventoryItem
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Item Details</h1>
+
+<div class="mb-3">
+    <label>ID:</label> @Model.Id
+</div>
+<div class="mb-3">
+    <label>Name:</label> @Model.Name
+</div>
+<div class="mb-3">
+    <label>Quantity:</label> @Model.Quantity
+</div>
+<div class="mb-3">
+    <label>Price:</label> @Model.Price.ToString("C", new System.Globalization.CultureInfo("id-ID"))
+</div>
+
+<a class="btn btn-secondary" href="@Url.Action("Index")">Back</a>

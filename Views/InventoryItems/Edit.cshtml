@@ -1,0 +1,56 @@
+@model InventorySystem.Models.InventoryItem
+
+@{
+    ViewData["Title"] = "Edit Item";
+}
+
+<h1>Edit Item</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    
+    <div class="mb-3">
+        <label asp-for="Quantity" class="form-label"></label>
+        <input asp-for="Quantity" type="number" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label"></label>
+        <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input asp-for="Price" id="Price" class="form-control" value="@Model.Price.ToString("N0", new System.Globalization.CultureInfo("id-ID"))" />
+        </div>
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a class="btn btn-secondary" href="@Url.Action("Index")">Back</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        const priceInput = document.getElementById('Price');
+
+        priceInput.addEventListener('input', function(e) {
+            let value = this.value.replace(/\D/g, '');
+            if(value) {
+                this.value = parseInt(value).toLocaleString('id-ID');
+            } else {
+                this.value = '';
+            }
+        });
+
+        document.querySelector('form').addEventListener('submit', function() {
+            priceInput.value = priceInput.value.replace(/\./g, '');
+        });
+    </script>
+}
