@@ -16,13 +16,11 @@ namespace InventorySystem.Controllers
             _context = context;
         }
 
-        // GET: InventoryItems
         public async Task<IActionResult> Index()
         {
             return View(await _context.InventoryItems.ToListAsync());
         }
 
-        // GET: InventoryItems/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return NotFound();
@@ -34,13 +32,11 @@ namespace InventorySystem.Controllers
             return View(item);
         }
 
-        // GET: InventoryItems/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: InventoryItems/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(InventoryItem item)
@@ -54,7 +50,6 @@ namespace InventorySystem.Controllers
             return View(item);
         }
 
-        // GET: InventoryItems/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -65,7 +60,6 @@ namespace InventorySystem.Controllers
             return View(item);
         }
 
-        // POST: InventoryItems/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, InventoryItem item)
@@ -89,7 +83,6 @@ namespace InventorySystem.Controllers
             return View(item);
         }
 
-        // GET: InventoryItems/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -101,7 +94,6 @@ namespace InventorySystem.Controllers
             return View(item);
         }
 
-        // POST: InventoryItems/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

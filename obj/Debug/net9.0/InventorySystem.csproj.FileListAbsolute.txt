@@ -312,3 +312,4 @@ C:\laragon\www\InventorySystem\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.S
 C:\laragon\www\InventorySystem\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\laragon\www\InventorySystem\obj\Debug\net9.0\compressed\zvifq1g5s2-4gpnf9cw0e.gz
 C:\laragon\www\InventorySystem\obj\Debug\net9.0\compressed\lbx8zi6ujm-4gpnf9cw0e.gz
+C:\laragon\www\InventorySystem\obj\Debug\net9.0\InventorySystem.sourcelink.json

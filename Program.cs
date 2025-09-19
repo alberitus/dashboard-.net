@@ -3,14 +3,12 @@ using InventorySystem.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Tambahkan memory cache untuk session
 builder.Services.AddDistributedMemoryCache();
 
-// Tambahkan konfigurasi session
+// konfigurasi session
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // durasi session
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
@@ -40,10 +38,8 @@ app.UseSession();
 
 app.UseAuthorization();
 
-// Mapping static assets, jika ada
 app.MapStaticAssets();
 
-// Route default ke login
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Login}/{id?}");
